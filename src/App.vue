@@ -14,4 +14,10 @@
   </v-app>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { fetchAllData } from "./composable/fetchAnimeData";
+import { provide, ref } from "vue";
+const Data = ref(fetchAllData());
+
+provide("data", Data);
+</script>

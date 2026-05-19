@@ -1,10 +1,8 @@
 <template>
-  <v-app-bar title="ANISCAN">
-    <v-form class="search-input">
-      <v-text-field label="search" v-model="query"> </v-text-field>
-    </v-form>
-    <v-list title="links">
-      <v-list-item v-for="navLink in navLinksText" :key="navLink.name" title="">
+  <v-app-bar class="ga-0">
+    <v-app-bar-title>ANISCAN</v-app-bar-title>
+    <v-list class="ma-0" title="links">
+      <v-list-item v-for="navLink in navLinksText" :key="navLink.name">
         <router-link :to="navLink.to">{{ navLink.name }}</router-link>
       </v-list-item>
     </v-list>
@@ -23,17 +21,12 @@ const navLinksText = [
   },
   {
     name: "About",
-    to: "/about",
+    to: "/",
   },
   {
     name: "More",
-    to: "/more",
+    to: "/",
   },
 ];
 </script>
-<style scoped>
-.search-input {
-  margin-left: auto;
-  width: 300px;
-}
-</style>
+<style scoped></style>
