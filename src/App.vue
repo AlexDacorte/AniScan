@@ -15,9 +15,9 @@
 </template>
 
 <script lang="ts" setup>
-import { fetchAllData } from "./composable/fetchAnimeData";
+import { fetchMockData } from "./composable/fetchAnimeData";
 import { provide, ref } from "vue";
-const Data = ref(fetchAllData());
+const Data = ref(fetchMockData());
 
 provide("data", Data);
 </script>

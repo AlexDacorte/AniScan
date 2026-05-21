@@ -37,7 +37,7 @@
 </template>
 <script setup lang="ts">
 import { onMounted } from "vue";
-import type { remoteAnime } from "../../types";
+import type { remoteAnimeType as remoteAnime } from "../../types";
 onMounted(() => {
   console.log(props.anime);
 });

@@ -1,4 +1,4 @@
-export type remoteAnime = {
+export type remoteAnimeType = {
   data: {
     [
       {
