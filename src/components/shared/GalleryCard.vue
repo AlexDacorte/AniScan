@@ -4,21 +4,21 @@
       <v-row class="ga-0"
         ><v-col cols="16" class="mr-4">
           <v-img
-            :src="anime.images.jpg.image_url"
-            :alt="anime.title_english"
+            src="https://picsum.photos/seed/anime-1-image_url/300/450"
+            alt="placeHolder"
             class="rounded"
           >
           </v-img
         ></v-col>
         <v-col cols="6"
           ><v-chip
-            :class="anime.data.airing ? 'green' : 'red'"
+            :class="true ? 'green' : 'red'"
             class="rounded"
             variant="outlined"
-            >{{ anime.data.airing ? "airing" : "not airing" }}</v-chip
+            >{{ true ? "airing" : "not airing" }}</v-chip
           >
-          <p>{{ anime.data.aired.from ?? "no release date" }}</p>
-          <h3>{{ anime.data.title_english ?? "no title" }}</h3>
+          <p>"no release date"</p>
+          <h3>"no title"</h3>
           <v-row>
             <v-col cols="6">rating</v-col>
             <v-col cols="6">data</v-col>
@@ -36,17 +36,12 @@
   </v-card>
 </template>
 <script setup lang="ts">
-import { onMounted } from "vue";
-import type { remoteAnimeType as remoteAnime } from "../../types";
-onMounted(() => {
-  console.log(props.anime);
-});
-const props = defineProps({
-  anime: {
-    type: Object as () => remoteAnime,
-    required: true,
-  },
-});
+// const props = defineProps({
+//   // anime: {
+//   //   type: Object as () => remoteAnimeType,
+//   //   required: true,
+//   // },
+// });
 </script>
 <style scoped>
 .anime-card {

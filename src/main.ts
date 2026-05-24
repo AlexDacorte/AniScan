@@ -9,7 +9,7 @@ import { createApp } from "vue";
 import { registerPlugins } from "@/plugins";
 import router from "@/router";
 import App from "./App.vue";
-import NavBar from "./components/NavBar.vue";
+import NavBar from "./components/shared/NavBar.vue";
 import HomeView from "@/views/HomeView.vue";
 import "unfonts.css";
 

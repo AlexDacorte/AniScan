@@ -1,5 +1,6 @@
 import { fileURLToPath, URL } from 'node:url'
 import Vue from '@vitejs/plugin-vue'
+import {VitePWA} from 'vite-plugin-pwa'
 import Fonts from 'unplugin-fonts/vite'
 import { defineConfig } from 'vite'
 import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
@@ -28,6 +29,9 @@ export default defineConfig({
         ],
       },
     }),
+    VitePWA({
+      registerType: 'autoUpdate',
+    })
   ],
   define: { 'process.env': {} },
   resolve: {

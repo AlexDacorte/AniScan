@@ -1,8 +1,7 @@
 <template>
   <div class="home-view">
     <HeroSection></HeroSection>
-    <p>hello homeview</p>
-    <v-container>
+    <v-container class="list-container">
       <v-row>
         <v-col
           v-for="data in animeData"
@@ -11,7 +10,7 @@
           sm="6"
           md="4"
         >
-          <GalleryCard :anime="data"></GalleryCard>
+          <GalleryCard></GalleryCard>
         </v-col>
       </v-row>
     </v-container>
@@ -27,5 +26,11 @@ const animeData = inject("data");
 <style scoped>
 .home-view {
   background: background;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.list-container {
+  max-width: 920px;
 }
 </style>
