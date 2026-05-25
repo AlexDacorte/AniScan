@@ -1,11 +1,12 @@
 <template>
-  <v-app-bar class="navbar ga-0">
+  <v-app-bar class="navbar ga-0 pl-8 pr-8">
     <v-app-bar-title>ANISCAN</v-app-bar-title>
-    <v-list class="nav-links ma-0" title="links">
+    <v-list nav class="nav-links ma-0" title="links">
       <router-link
         v-for="navLink in navLinksText"
         :key="navLink.name"
         :to="navLink.to"
+        class="nav-links"
         >{{ navLink.name }}</router-link
       >
     </v-list>
@@ -40,5 +41,11 @@ const navLinksText = [
 
 .nav-links {
   margin: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-links:visited {
+  color: white;
 }
 </style>

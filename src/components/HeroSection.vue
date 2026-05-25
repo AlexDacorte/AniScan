@@ -6,21 +6,19 @@
         <em class="paragraph-text bold">Aniscan</em> <em>is</em> the largest
         collection of anime data there is
       </p>
-      <v-chip-group class="chip-group-container d-flex">
-        <v-row>
-          <v-col xs="6" md="6" class="hero-column-chip-container">
-            <v-chip
-              variant="plain"
-              class="hero-chip"
-              label
-              v-for="tag in ANIME_CAROUSEL_TAGS"
-              :key="tag.id"
-            >
-              {{ tag.label }}
-            </v-chip>
-          </v-col>
-        </v-row>
-      </v-chip-group>
+      <v-responsive class="overflox-x-auto">
+        <v-chip-group class="chip-group-container d-flex" column>
+          <v-chip
+            variant="plain"
+            class="hero-chip"
+            label
+            v-for="tag in ANIME_CAROUSEL_TAGS"
+            :key="tag.id"
+          >
+            {{ tag.label }}
+          </v-chip>
+        </v-chip-group>
+      </v-responsive>
 
       <div class="hero-button-container">
         <v-btn class="hero-button" color="primary" type="submit">
@@ -79,11 +77,10 @@ const ANIME_CAROUSEL_TAGS = [
   .hero-section {
     display: flex;
     background: background;
-    flex-wrap: wrap;
     padding: 20px;
   }
 
-  .hero-section > * {
+  .chip-group-container {
     flex: 1;
   }
   .hero-info {
@@ -92,6 +89,7 @@ const ANIME_CAROUSEL_TAGS = [
     justify-content: center;
     align-items: center;
     gap: 20px;
+    max-width: 50vw;
   }
   .hero-info > h3 {
     margin-bottom: 60px;
@@ -134,6 +132,9 @@ const ANIME_CAROUSEL_TAGS = [
     background: background;
     flex-wrap: wrap;
     gap: 20px;
+  }
+  .anime-card {
+    display: none;
   }
 }
 </style>

@@ -6,9 +6,10 @@
         <v-col
           v-for="data in animeData"
           :key="data.mal_id"
-          cols="12"
-          sm="6"
-          md="4"
+          xs="12"
+          sm="12"
+          md="6"
+          lg="4"
         >
           <GalleryCard></GalleryCard>
         </v-col>
